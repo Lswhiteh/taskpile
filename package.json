@@ -1,0 +1,15 @@
+{
+	"name": "taskpile",
+	"private": true,
+	"workspaces": ["app", "worker"],
+	"scripts": {
+		"dev": "npm run dev --workspace=app",
+		"build": "npm run build --workspace=app",
+		"lint": "npx @biomejs/biome check .",
+		"lint:fix": "npx @biomejs/biome check --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"typescript": "^5.7.2"
+	}
+}
