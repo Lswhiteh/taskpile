@@ -493,7 +493,7 @@ export function LandingPage() {
 						marginBottom: "52px",
 					}}
 				>
-					Each one technically counts as "backlog grooming."
+					Each one technically counts as "backlog refinement."
 				</p>
 				<div
 					className="tp-modes-grid"

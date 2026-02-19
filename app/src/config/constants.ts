@@ -1,5 +1,6 @@
 // OAuth
-export const LINEAR_CLIENT_ID = import.meta.env.VITE_LINEAR_CLIENT_ID ?? "";
+export const LINEAR_CLIENT_ID =
+	import.meta.env.VITE_LINEAR_CLIENT_ID || "d5f3188f248dd5d35bb19e950aeaf716";
 export const LINEAR_AUTH_URL = "https://linear.app/oauth/authorize";
 export const WORKER_URL =
 	import.meta.env.VITE_WORKER_URL ?? "https://api.taskpile.dev";
