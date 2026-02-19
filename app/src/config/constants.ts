@@ -2,7 +2,7 @@
 export const LINEAR_CLIENT_ID = import.meta.env.VITE_LINEAR_CLIENT_ID ?? "";
 export const LINEAR_AUTH_URL = "https://linear.app/oauth/authorize";
 export const WORKER_URL =
-	import.meta.env.VITE_WORKER_URL ?? "http://localhost:8787";
+	import.meta.env.VITE_WORKER_URL ?? "https://api.taskpile.dev";
 export const REDIRECT_URI = `${window.location.origin}/callback`;
 
 // Card sizing
@@ -56,3 +56,55 @@ export const SORT_BIN_HEIGHT = 160;
 export const SORT_DEADLINE_Y_OFFSET = 180; // from bottom
 export const STACK_SPAWN_INTERVAL_MS = 3000;
 export const CARD_DROP_STAGGER_MS = 80;
+
+// ── JRPG Adventure ──
+
+export const JRPG = {
+	// Damage
+	ELEMENT_WEAK_MULT: 1.75,
+	ELEMENT_RESIST_MULT: 0.5,
+	CRIT_MULT: 1.5,
+	CRIT_CHANCE: 0.08,
+	DAMAGE_VARIANCE_MIN: 0.9,
+	DAMAGE_VARIANCE_RANGE: 0.2,
+
+	// Limit Break
+	LIMIT_GAUGE_MAX: 100,
+	LIMIT_FILL_DAMAGE_TAKEN: 0.8,
+	LIMIT_FILL_DAMAGE_DEALT: 0.2,
+
+	// Status durations
+	STATUS_DURATION_POISON: 3,
+	STATUS_DURATION_BURN: 3,
+	STATUS_DURATION_FREEZE: 1,
+	STATUS_DURATION_BUFF: 3,
+	POISON_TICK_PERCENT: 0.05,
+	BURN_TICK_PERCENT: 0.08,
+	DEF_DOWN_MULT: 0.3,
+	ATK_UP_MULT: 0.3,
+
+	// Animation timings (ms)
+	DAMAGE_FLOAT_DURATION: 1200,
+	FLASH_OVERLAY_DURATION: 300,
+	SCREEN_SHAKE_DURATION: 400,
+	FLASH_TEXT_DURATION: 1000,
+	HP_BAR_LERP_SPEED: 0.08,
+
+	// Element colors
+	ELEMENT_COLORS: {
+		fire: "#ef4444",
+		ice: "#60a5fa",
+		thunder: "#facc15",
+		water: "#3b82f6",
+		void: "#a78bfa",
+	},
+
+	// Status colors
+	STATUS_COLORS: {
+		poison: "#a855f7",
+		burn: "#f97316",
+		freeze: "#67e8f9",
+		defDown: "#f87171",
+		atkUp: "#4ade80",
+	},
+} as const;

@@ -82,7 +82,8 @@ const TUTORIALS: Record<GameMode, TutorialContent> = {
 	},
 	sprintTetris: {
 		title: "Sprint Tetris",
-		description: "Fill complete rows with issue cards to clear them, Tetris-style!",
+		description:
+			"Fill complete rows with issue cards to clear them, Tetris-style!",
 		rules: [
 			"Cards drop and settle into a grid",
 			"Fill a complete horizontal row to clear it",

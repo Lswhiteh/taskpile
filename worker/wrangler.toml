@@ -1,9 +1,14 @@
 name = "taskpile-worker"
 main = "src/index.ts"
 compatibility_date = "2024-12-01"
+workers_dev = true
+
+[[routes]]
+pattern = "api.taskpile.dev"
+custom_domain = true
 
 [vars]
-ALLOWED_ORIGINS = "http://localhost:5173,https://taskpile.pages.dev"
+ALLOWED_ORIGINS = "http://localhost:5173,https://taskpile.pages.dev,https://taskpile.dev,https://www.taskpile.dev"
 LINEAR_CLIENT_ID = "d5f3188f248dd5d35bb19e950aeaf716"
 
 # Set via `wrangler secret put`:

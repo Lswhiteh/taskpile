@@ -62,10 +62,7 @@ export function GamePage() {
 				<GameHUD mode={mode} score={score} onBack={goBack} />
 				<JRPGCanvas issues={issues} />
 				{showTutorial && (
-					<TutorialModal
-						mode={mode}
-						onDismiss={() => setShowTutorial(false)}
-					/>
+					<TutorialModal mode={mode} onDismiss={() => setShowTutorial(false)} />
 				)}
 			</div>
 		);
@@ -81,10 +78,7 @@ export function GamePage() {
 			/>
 			<PhysicsCanvas issues={issues} onSavedCountChange={setSavedCount} />
 			{showTutorial && (
-				<TutorialModal
-					mode={mode}
-					onDismiss={() => setShowTutorial(false)}
-				/>
+				<TutorialModal mode={mode} onDismiss={() => setShowTutorial(false)} />
 			)}
 		</div>
 	);
